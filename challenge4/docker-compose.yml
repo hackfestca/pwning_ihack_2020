@@ -1,0 +1,10 @@
+version: '3'
+services:
+  chal4_name:
+    build:
+      context: .
+    working_dir: /home/chal4
+    ports:
+      - "8765:8765" # exposed:local
+    entrypoint: /etc/run_xinetd.sh
+    read_only: true
